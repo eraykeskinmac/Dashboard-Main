@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, PageWithSidebar, Text, Flex, Icon, Heading, Image } from "bumbag";
 import FullBox from "./Fullbox";
+import Resolve from "./Resolve";
 import {
   faPoll,
   faTicketAlt,
@@ -13,6 +14,7 @@ import {
   faSearch,
   faBell,
 } from "@fortawesome/free-solid-svg-icons";
+import ChartLine from "./ChartLine";
 
 function Dasboard() {
   return (
@@ -133,11 +135,10 @@ function Dasboard() {
           </Box>
         </Box>
       }
-      sidebarWidth="255px"
       backgroundColor="F7F8FC"
     >
       <Flex height="128px" alignItems="center" justifyContent="space-between">
-        <Heading fontSize="400" marginLeft="30px">
+        <Heading fontSize="400" marginLeft="35px">
           Overview
         </Heading>
         <Flex alignItems="center">
@@ -183,6 +184,67 @@ function Dasboard() {
         <FullBox />
         <FullBox />
         <FullBox />
+        <FullBox />
+        <FullBox />
+      </Flex>
+      <Flex
+        width="1730px"
+        height="550px"
+        backgroundColor="FFFFFF"
+        borderRadius="8px"
+        marginLeft="35px"
+        marginTop="30px"
+        border="1px solid #DFE0EB"
+        boxSizing="border-box"
+      >
+        <Flex justifyContent="space-between">
+          <Box width="1300px">
+            <Flex
+              fontWeight="700"
+              fontSize="19px"
+              color="252733"
+              marginTop="32px"
+              marginLeft="32px"
+              marginBottom="8px"
+            >
+              Today's trends
+            </Flex>
+            <Flex justifyContent="space-between" alignItems="center">
+              <Text marginLeft="32px" color="9FA2B4" fontSize="12px">
+                as of 25 May 2019, 09:41 PM
+              </Text>
+              <Flex alignItems="center" marginRight="32px">
+                <Flex
+                  height="16px"
+                  width="2px"
+                  backgroundColor="3751FF"
+                  transform="rotate(90deg)"
+                  marginRight="16px"
+                  borderRadius="2px"
+                ></Flex>
+                <Text marginRight="48px">Today</Text>
+                <Flex
+                  height="16px"
+                  width="2px"
+                  backgroundColor="DFE0EB"
+                  transform="rotate(90deg)"
+                  marginRight="16px"
+                  borderRadius="2px"
+                ></Flex>
+                <Text>Yesterday </Text>
+              </Flex>
+            </Flex>
+            <ChartLine />
+          </Box>
+          <Flex height="550px" width="1px" backgroundColor="DFE0EB"></Flex>
+        </Flex>
+        <Flex flexDirection="column" height="100%">
+          <Resolve />
+          <Resolve />
+          <Resolve />
+          <Resolve/>
+          <Resolve/>
+        </Flex>
       </Flex>
     </PageWithSidebar>
   );
