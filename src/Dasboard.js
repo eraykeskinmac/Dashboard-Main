@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, PageWithSidebar, Text, Flex, Icon, Heading, Image } from "bumbag";
-import FullBox from "./Fullbox";
-import Resolve from "./Resolve";
+import FullBox from "./components/Fullbox";
 import {
   faPoll,
   faTicketAlt,
@@ -14,7 +13,10 @@ import {
   faSearch,
   faBell,
 } from "@fortawesome/free-solid-svg-icons";
-import ChartLine from "./ChartLine";
+import ChartLine from "./components/ChartLine";
+import Resolve from "./components/Resolve";
+import TaskBar from "./components/TaskBar";
+import Tasks from "./components/Tasks";
 
 function Dasboard() {
   return (
@@ -242,9 +244,14 @@ function Dasboard() {
           <Resolve />
           <Resolve />
           <Resolve />
-          <Resolve/>
-          <Resolve/>
+          <Resolve />
+          <Resolve bottom />
         </Flex>
+      </Flex>
+      <Flex>
+        <TaskBar/>
+        <TaskBar/>
+        <Tasks/>
       </Flex>
     </PageWithSidebar>
   );

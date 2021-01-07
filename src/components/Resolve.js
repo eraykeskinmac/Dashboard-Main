@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, Flex } from "bumbag";
 
-function Resolve() {
+function Resolve(props) {
   return (
     <Flex
       height="110px"
@@ -9,6 +9,7 @@ function Resolve() {
       justifyContent="space-evenly"
       alignItems="center"
       flexDirection="column"
+      borderBottom={props.bottom ? '' : "1px solid #dfe0eb"}
     >
       <Flex
         justifyContent="space-evenly"
@@ -22,12 +23,6 @@ function Resolve() {
           449
         </Text>
       </Flex>
-      <Flex
-        width="430px"
-        height="1px"
-        backgroundColor="DFE0EB"
-        marginTop="16px"
-      ></Flex>
     </Flex>
   );
 }
